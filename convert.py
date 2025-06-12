@@ -11,12 +11,14 @@ def get_audio_titles_and_comments():
             audio = eyed3.load(file_path)
             title = audio.tag.title if audio and audio.tag else None
             comments = None
+            duration = audio.info.time_secs if audio and audio.info else None
             if audio and audio.tag and audio.tag.comments:
                 comments = audio.tag.comments[0].text
             audio_data.append({
                 'file': file_path,
                 'title': title,
-                'comments': comments
+                'comments': comments,
+                'duration': duration,
             })
     return audio_data
 
