@@ -1,11 +1,25 @@
 import os
+import eyed3
+import yaml
 
-def get_audio_files():
+def get_audio_titles_and_comments():
     audio_dir = 'audio'
-    audio_files = []
+    audio_data = []
     for file in os.listdir(audio_dir):
         if file.endswith('.mp3'):
-            audio_files.append(os.path.join(audio_dir, file))
-    return audio_files
+            file_path = os.path.join(audio_dir, file)
+            audio = eyed3.load(file_path)
+            title = audio.tag.title if audio and audio.tag else None
+            comments = None
+            if audio and audio.tag and audio.tag.comments:
+                comments = audio.tag.comments[0].text
+            audio_data.append({
+                'file': file_path,
+                'title': title,
+                'comments': comments
+            })
+    return audio_data
 
-print(get_audio_files())
+audio_info = get_audio_titles_and_comments()
+
+print(yaml.dump(audio_info, allow_unicode=True, sort_keys=False))
