@@ -37,3 +37,54 @@ item:
     file: /audio/TFIT05.mp3
     duration: 00:00:22
     length: 352,587
+
+# Add this under the episodes section in feed.yaml
+
+  - title: "Episode 4"
+    description: "Exploring Python YAML Libraries"
+    audio_url: "audio/episode4.mp3"
+    date: "2025-06-20"
+
+title: Innovators Unplugged
+subtitle: Powered by AI Insights
+author: Jamie Chen
+description: Engaging conversations with pioneers shaping tomorrow’s technology landscape.
+image: /images/ai_artwork.jpg
+language: en-us
+category: Technology
+format: audio/mpeg
+item:
+  - title: EP01-Tech Trends for 2025
+    description: Host Jamie Chen and analysts Priya Patel and Lucas Moreno discuss the most anticipated technology trends and innovations for 2025.
+    published: Mon, 10 Feb 2025 18:00:00 GMT
+    file: /audio/IU01.mp3
+    duration: 00:00:36
+    length: 576324
+  - title: EP02-Demystifying Generative AI
+    description: Dr. Evelyn Brooks explains the basics of generative AI, its real-world uses, and how organizations are adopting these tools for growth.
+    published: Mon, 17 Feb 2025 18:00:00 GMT
+    file: /audio/IU02.mp3
+    duration: 00:00:22
+    length: 351963
+  - title: EP03-DevOps in the Age of AI
+    description: Marcus Lee explores how AI-driven automation is transforming DevOps, streamlining workflows, and enabling smarter software delivery.
+    published: Mon, 24 Feb 2025 18:00:00 GMT
+    file: /audio/IU03.mp3
+    duration: 00:00:19
+    length: 305488
+  - title: EP04-Responsible AI: Ethics and Impact
+    description: Data scientist and AI ethicist Sofia Nguyen discusses the importance of transparency, fairness, and accountability in AI systems.
+    published: Mon, 3 Mar 2025 18:00:00 GMT
+    file: /audio/IU04.mp3
+    duration: 00:00:29
+    length: 470668
+  - title: EP05-Strategizing AI for Business Success
+    description: Business strategist Oliver Grant shares practical advice for developing an AI roadmap that balances innovation, ethics, and compliance.
+    published: Mon, 10 Mar 2025 18:00:00 GMT
+    file: /audio/IU05.mp3
+    duration: 00:00:22
+    length: 352587
+  - title: Episode 4
+    description: Exploring Python YAML Libraries
+    audio_url: audio/episode4.mp3
+    date: 2025-06-20
